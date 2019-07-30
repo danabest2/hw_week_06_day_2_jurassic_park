@@ -33,14 +33,20 @@ describe('Park', function() {
   it('should have a collection of dinosaurs', function(){
      const actual = park.dinosaursCollection.length;
      const expected = 0;
-      assert.strictEqual(actual,expected);
+     assert.strictEqual(actual,expected);
   });
 
-
-
-
-  it('should be able to add a dinosaur to its collection');
-
+  it('should be able to add a dinosaur to its collection', function(){
+     park.addDinosaur(dinosaur_1);
+     const expected = true;
+     const actual = park.insert_dinosaur(dinosaur_1)
+     assert.strictEqual(actual, expected);
+  });
+  // it('should be able to add a dinosaur to its collection',function(){
+  //     park.add_dino(dinosaur_1);
+  //     const actual = park.has_dino(dinosaur_1)
+  //     const expected = true;
+  //     assert.strictEqual(actual,expected);
   it('should be able to remove a dinosaur from its collection');
 
   it('should be able to find the dinosaur that attracts the most visitors');
