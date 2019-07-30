@@ -47,12 +47,23 @@ describe('Park', function() {
   //     const actual = park.has_dino(dinosaur_1)
   //     const expected = true;
   //     assert.strictEqual(actual,expected);
-  it('should be able to remove a dinosaur from its collection');
 
-  it('should be able to find the dinosaur that attracts the most visitors');
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to remove a dinosaur from its collection', function(){
+    park.addDinosaur(dinosaur_1);
+    park.addDinosaur(dinosaur_2);
+    park.remove_dinosaur(dinosaur_1);
+   const actual = park.insert_dinosaur(dinosaur_1);
+   const expected = false;
+   assert.strictEqual(actual,expected);
 
-  it('should be able to remove all dinosaurs of a particular species');
+ });
+
+
+  xit('should be able to find the dinosaur that attracts the most visitors');
+
+  xit('should be able to find all dinosaurs of a particular species');
+
+  xit('should be able to remove all dinosaurs of a particular species');
 
 });

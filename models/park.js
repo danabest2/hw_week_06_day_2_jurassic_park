@@ -10,6 +10,11 @@ Park.prototype.addDinosaur = function (dinosaur) {
   this.dinosaursCollection.push(dinosaur);
 };
 
+Park.prototype.remove_dinosaur = function(dinosaur){
+  const deleteIndex = this.dinosaursCollection.indexOf(dinosaur);
+  this.dinosaursCollection.splice(deleteIndex,1)
+  return `${dinosaur.species} removed from Park`
+};
 
 Park.prototype.insert_dinosaur = function(dinosaur){
   return this.dinosaursCollection.includes(dinosaur);
