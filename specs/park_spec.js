@@ -60,7 +60,17 @@ describe('Park', function() {
  });
 
 
-  xit('should be able to find the dinosaur that attracts the most visitors');
+  it('should be able to find the dinosaur that attracts the most visitors', function (){
+    park.addDinosaur(dinosaur_1);
+    park.addDinosaur(dinosaur_2);
+    park.addDinosaur(dinosaur_3);
+    park.addDinosaur(dinosaur_4);
+   const actual = park.mostvisited_dinosaur();
+   const expected = dinosaur_4;
+   assert.strictEqual(actual,expected);
+  });
+
+
 
   xit('should be able to find all dinosaurs of a particular species');
 
